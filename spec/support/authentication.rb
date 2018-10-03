@@ -1,4 +1,4 @@
-module Authorization
+module Authentication
   def sign_in user=nil
     user ||= double
 
