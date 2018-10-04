@@ -56,12 +56,18 @@ RSpec.configure do |config|
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
+
+  config.before(:suite) { DatabaseRewinder.clean_all }
+
+  config.after(:each) { DatabaseRewinder.clean }
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
   config.include Authentication
   config.include Permitter
   config.include FactoryBot::Syntax::Methods
 end
+ActiveRecord::Migration.maintain_test_schema!
+
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|

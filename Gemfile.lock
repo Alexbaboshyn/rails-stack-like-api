@@ -55,6 +55,7 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    database_rewinder (0.9.0)
     diff-lcs (1.3)
     draper (3.0.1)
       actionpack (~> 5.0)
@@ -213,6 +214,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   bootsnap
+  database_rewinder
   draper
   email_validator
   factory_bot_rails

@@ -18,6 +18,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'factory_bot_rails'
   gem 'ffaker'
+  gem 'database_rewinder'
 end
 
 group :development do
