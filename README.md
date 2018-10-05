@@ -9,7 +9,7 @@ git clone https://github.com/Alexbaboshyn/rails-stack-like-api
 
 ### Install gems
 ```
-cd rails-chats-api
+gem install bundler
 ```
 
 ```
