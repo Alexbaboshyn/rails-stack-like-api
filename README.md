@@ -1,24 +1,32 @@
-# README
+# Rails Stack Like API - Sample Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Install
 
-Things you may want to cover:
+### Clone repository
+```
+git clone https://github.com/MLSDev/rails-chats-api
+```
 
-* Ruby version
+### Install gems
+```
+cd rails-chats-api
+```
 
-* System dependencies
+```
+bundle install
+```
 
-* Configuration
+### Run migrations
+```
+rake db:migrate
+```
 
-* Database creation
+### Run specs
+```
+rake
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Run server
+```
+rails s
+```
