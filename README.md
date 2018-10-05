@@ -4,7 +4,7 @@
 
 ### Clone repository
 ```
-git clone https://github.com/MLSDev/rails-chats-api
+git clone https://github.com/Alexbaboshyn/rails-stack-like-api
 ```
 
 ### Install gems
