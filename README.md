@@ -15,6 +15,10 @@ gem install bundler
 ```
 bundle install
 ```
+### Create databases
+```
+rake db:create
+```
 
 ### Run migrations
 ```
