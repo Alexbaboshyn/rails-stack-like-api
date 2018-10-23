@@ -8,4 +8,10 @@ FactoryBot.define do
 
     user
   end
+
+  trait :answer_with_rate do
+    after :create do |answer|
+      create :rate, user_id: answer.user_id, rateable: answer
+    end
+  end
 end

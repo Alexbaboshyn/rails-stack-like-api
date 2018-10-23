@@ -10,8 +10,8 @@ FactoryBot.define do
 
     reputation { 0 }
 
-    trait :with_auth_token do
-      association :auth_token
+    after :create do |user|
+      create_list :auth_token, 1, user_id: user.id
     end
 
     trait :with_questions_and_answers do
