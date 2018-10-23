@@ -37,7 +37,7 @@ RSpec.describe 'GetUsersResource', type: :request do
   end
 
   context 'user was not found' do
-    before { get '/users/3', params: {} , headers: headers }
+    before { get '/users/0', params: {} , headers: headers }
 
     it('returns HTTP Status Code 404') { expect(response).to have_http_status 404 }
   end

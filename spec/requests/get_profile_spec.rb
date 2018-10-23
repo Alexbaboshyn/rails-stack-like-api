@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'GetProfile', type: :request do
-  let(:user) { create(:user, :with_auth_token, :with_questions_and_answers)}
+  let(:user) { create(:user, :with_questions_and_answers)}
 
-  let(:value) { user.auth_token.value }
+  let(:value) { user.auth_tokens.last.value }
 
   let(:headers) { { 'Authorization' => "Token token=#{value}", 'Content-type' => 'application/json', 'Accept' => 'application/json' } }
 
@@ -27,7 +27,8 @@ RSpec.describe 'GetProfile', type: :request do
       "last_name" => user.last_name,
       "reputation" => user.reputation,
       "self_answers" => self_answers,
-      "self_questions" => self_questions
+      "self_questions" => self_questions,
+      "auth_tokens" => user.auth_tokens.map { |token| { "value" => token.value } }
     }
   end
 

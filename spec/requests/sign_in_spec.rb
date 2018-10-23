@@ -9,7 +9,7 @@ RSpec.describe 'SignIn', type: :request do
 
   let(:headers) { { 'Accept' => 'application/json' } }
 
-  let(:token_response) { { "auth_token" => user.auth_token.value } }
+  let(:token_response) { { "auth_token" => user.auth_tokens.last.value } }
 
   before { post '/session', params: params, headers: headers }
 
