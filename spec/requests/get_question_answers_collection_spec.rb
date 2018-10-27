@@ -24,8 +24,6 @@ RSpec.describe 'GetQuestionAnswersCollection', type: :request do
     before { get '/questions/1/answers', params: {} , headers: headers }
 
     it("returns question's answers") { expect(JSON.parse(response.body)).to eq answers }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'question was not found' do

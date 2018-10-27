@@ -15,8 +15,6 @@ RSpec.describe 'SignIn', type: :request do
 
   context 'authenticated' do
     it('returns auth_token') { expect(JSON.parse(response.body)).to eq token_response }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'not authenticated' do

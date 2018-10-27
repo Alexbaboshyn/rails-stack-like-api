@@ -43,8 +43,6 @@ RSpec.describe 'GetQuestionsResource', type: :request do
     before { get '/questions/1', params: {} , headers: headers }
 
     it("returns question's information") { expect(JSON.parse(response.body)).to eq question_response }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'question was not found' do

@@ -22,7 +22,5 @@ RSpec.describe 'GetUsersCollection', type: :request do
     before { get '/users', params: {} , headers: headers }
 
     it('returns collection of users') { expect(JSON.parse(response.body)).to eq users_collection }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 end

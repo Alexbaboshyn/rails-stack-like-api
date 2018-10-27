@@ -37,7 +37,5 @@ RSpec.describe 'GetQustionsCollection', type: :request do
     before { get '/questions', params: {} , headers: headers }
 
     it('returns collection of questions') { expect(JSON.parse(response.body)).to eq questions_collection }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 end

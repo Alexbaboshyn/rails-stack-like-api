@@ -55,8 +55,6 @@ RSpec.describe 'RateQuestion', type: :request do
     end
 
     it('returns rated question') { expect(JSON.parse(response.body)).to eq question_response }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'negative rate' do
@@ -82,8 +80,6 @@ RSpec.describe 'RateQuestion', type: :request do
     end
 
     it('returns rated question') { expect(JSON.parse(response.body)).to eq question_response }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'Unauthorized' do

@@ -36,8 +36,6 @@ RSpec.describe 'GetProfile', type: :request do
     before { get '/profile', params: {} , headers: headers }
 
     it('returns profile') { expect(JSON.parse(response.body)).to eq profile_response }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'Unauthorized' do

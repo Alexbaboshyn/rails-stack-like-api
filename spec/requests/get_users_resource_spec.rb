@@ -32,8 +32,6 @@ RSpec.describe 'GetUsersResource', type: :request do
     before { get '/users/1', params: {} , headers: headers }
 
     it("returns user's information") { expect(JSON.parse(response.body)).to eq user_response }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'user was not found' do

@@ -36,8 +36,6 @@ RSpec.describe 'DeleteRateForQuestion', type: :request do
     end
 
     it('returns answer with updated rate') { expect(JSON.parse(response.body)).to eq answer_response }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'tried to update not self rate' do

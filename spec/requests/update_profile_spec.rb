@@ -38,8 +38,6 @@ RSpec.describe 'UpdateProfile', type: :request do
     before { put '/profile', params: params.to_json, headers: headers }
 
     it('returns updated_profile') { expect(JSON.parse(response.body)).to eq profile_response }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'invalid attributes' do

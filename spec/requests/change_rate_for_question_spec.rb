@@ -55,8 +55,6 @@ RSpec.describe 'ChangeRateForQuestion', type: :request do
     end
 
     it('returns unchanged data') { expect(JSON.parse(response.body)).to eq question_response }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'new rate has opposite kind (become negative)' do
@@ -82,8 +80,6 @@ RSpec.describe 'ChangeRateForQuestion', type: :request do
     end
 
     it('returns question with updated rate') { expect(JSON.parse(response.body)).to eq question_response }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'tried to update not self rate' do

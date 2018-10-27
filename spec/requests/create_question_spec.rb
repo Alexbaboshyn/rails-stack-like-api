@@ -59,8 +59,6 @@ RSpec.describe 'CreateQuestion', type: :request do
 
   context do
     it('returns created question') { expect(JSON.parse(response.body)).to eq question_response }
-
-    it('returns HTTP Status Code 200') { expect(response).to have_http_status 200 }
   end
 
   context 'Unauthorized' do
